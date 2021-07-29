@@ -1,6 +1,12 @@
 /node_modules
 /public/hot
 /public/storage
+/public/css
+/public/js
+/public/media
+/public/plugins
+/public/demo1
+/public/demo2
 /storage/*.key
 /vendor
 .env
@@ -13,3 +19,6 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+_ide_helper.php
+_ide_helper_models.php
+.phpstorm.meta.php
