@@ -21,7 +21,7 @@
         <div class="fv-row mb-10">
             <label class="form-label fs-6 fw-bolder text-dark">{{ __('Dirección de Correo') }}</label>
 
-            <input class="form-control form-control-lg mb-2 @error('email') is-invalid @enderror" type="email" name="email" tabindex="1" autocomplete="off" placeholder="Ingrese su correo" autofocus />
+            <input class="form-control form-control-lg form-control-solid mb-2 @error('email') is-invalid @enderror" type="email" name="email" tabindex="1" autocomplete="off" placeholder="Ingrese su correo" autofocus />
 
             @error('email')
             <div class="is-invalid text-danger">
@@ -35,7 +35,7 @@
                 <label class="form-label fw-bolder text-dark fs-6 mb-0">{{ __('Contraseña') }}</label>
             </div>
 
-            <input class="form-control form-control-lg mb-2 @error('password') is-invalid @enderror" type="password" name="password" tabindex="2" placeholder="******" autocomplete="off" />
+            <input class="form-control form-control-lg form-control-solid mb-2 @error('password') is-invalid @enderror" type="password" name="password" tabindex="2" autocomplete="off" />
 
             @error('password')
             <div class="is-invalid text-danger">
