@@ -43,7 +43,7 @@
     @stack('after-styles')
 </head>
 <!--end::Head -->
-<body id="kt_body" class="bg-body">
+<body id="kt_body" class="page-loading-enabled page-loading header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed toolbar-tablet-and-mobile-fixed aside-enabled aside-fixed" style="--kt-toolbar-height:55px;--kt-toolbar-height-tablet-and-mobile:55px">
 @yield('content')
 
 @stack('before-scripts')
