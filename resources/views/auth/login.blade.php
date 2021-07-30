@@ -1,73 +1,84 @@
-@extends('layouts.app')
+<x-auth-layout title="Iniciar Sesión">
+    <form method="POST" action="{{ route('login') }}" class="form mx-auto">
+        @csrf
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+        <div class="text-center mb-10">
+            <h1 class="text-dark mb-3">
+                {{ __('Iniciar Sesión') }}
+            </h1>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
+            @if(config('boilerplate.access.user.registration'))
+                <div class="text-gray-400 fw-bold fs-4">
+                    {{ __('no tiene cuenta?') }}
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
-                    </form>
+                    <a href="{{ route('frontend.auth.register') }}" class="link-primary fw-bolder">
+                        {{ __('Registrarse') }}
+                    </a>
                 </div>
+            @endif
+        </div>
+
+        <div class="fv-row mb-10">
+            <label class="form-label fs-6 fw-bolder text-dark">{{ __('Dirección de Correo') }}</label>
+
+            <input class="form-control form-control-lg mb-2 @error('email') is-invalid @enderror" type="email" name="email" tabindex="1" autocomplete="off" placeholder="Ingrese su correo" autofocus />
+
+            @error('email')
+            <div class="is-invalid text-danger">
+                {{ $message }}
+            </div>
+            @enderror
+        </div>
+
+        <div class="fv-row mb-10">
+            <div class="d-flex flex-stack mb-2">
+                <label class="form-label fw-bolder text-dark fs-6 mb-0">{{ __('Contraseña') }}</label>
+            </div>
+
+            <input class="form-control form-control-lg mb-2 @error('password') is-invalid @enderror" type="password" name="password" tabindex="2" placeholder="******" autocomplete="off" />
+
+            @error('password')
+            <div class="is-invalid text-danger">
+                {{ $message }}
+            </div>
+            @enderror
+        </div>
+
+        <div class="fv-row">
+            <div class="float-start mb-10">
+                <label class="form-check form-check-custom form-check-solid">
+                    <input class="form-check-input" type="checkbox" name="remember" />
+                    <span class="form-check-label fw-bold text-gray-700 fs-6">
+                        {{ __('Recordarme') }}
+                    </span>
+                </label>
+            </div>
+
+            <div class="float-end">
+                @if (Route::has('frontend.auth.password.request'))
+                    <a href="{{ route('frontend.auth.password.request') }}" class="link-primary fs-6 fw-bolder">
+                        {{ __('¿Olvido la contraseña?') }}
+                    </a>
+                @endif
             </div>
         </div>
-    </div>
-</div>
-@endsection
+
+        <div class="text-center">
+            <button type="submit" id="kt_sign_in_submit" class="btn btn-lg btn-primary w-100 mb-5">
+                @include('includes.partials.general._button-indicator', ['label' => __('Continuar')])
+            </button>
+
+            @if(config('boilerplate.access.user.social_login'))
+                @include('frontend.auth.includes.social')
+            @endif
+        </div>
+    </form>
+
+    @push('after-scripts')
+        <script>
+            $(document).ready(function () {
+                //
+            });
+        </script>
+    @endpush
+</x-auth-layout>
