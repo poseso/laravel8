@@ -37,7 +37,7 @@ var KTToggle = function(element, options) {
         // Elements
         the.element = element;
 
-        the.target = document.querySelector(the.element.getAttribute('data-kt-toggle-target'));
+        the.target = document.querySelector(the.element.getAttribute('data-kt-toggle-target')) ? document.querySelector(the.element.getAttribute('data-kt-toggle-target')) : the.element;
         the.state = the.element.hasAttribute('data-kt-toggle-state') ? the.element.getAttribute('data-kt-toggle-state') : '';
         the.attribute = 'data-kt-' + the.element.getAttribute('data-kt-toggle-name');
 

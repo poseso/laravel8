@@ -1,7 +1,7 @@
 "use strict";
 
 // Class definition
-var KTDatatablesServerSide = function () {
+var KTDatatablesServerSide = function () {  
     // Shared variables
     var table;
     var dt;
@@ -76,7 +76,7 @@ var KTDatatablesServerSide = function () {
                                     </a>
                                 </div>
                                 <!--end::Menu item-->
-
+                                
                                 <!--begin::Menu item-->
                                 <div class="menu-item px-3">
                                     <a href="#" class="menu-link px-3" data-kt-users-table-filter="delete_row">
@@ -136,7 +136,7 @@ var KTDatatablesServerSide = function () {
         const toolbarSelected = document.querySelector('[data-kt-docs-table-toolbar="selected"]');
         const selectedCount = document.querySelector('[data-kt-docs-table-select="selected_count"]');
 
-        // Select refreshed checkbox DOM elements
+        // Select refreshed checkbox DOM elements 
         const allCheckboxes = container.querySelectorAll('tbody [type="checkbox"]');
 
         // Detect checkboxes state & count

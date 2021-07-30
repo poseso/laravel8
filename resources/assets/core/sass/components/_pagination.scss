@@ -8,11 +8,28 @@
 	justify-content: center;
 	margin: 0;
 
+	// Pagination circle
 	&.pagination-circle {
 		.page-link {
 			border-radius: 50%;
 		}
 	}
+
+	// Pagination outline
+	&.pagination-outline {
+		.page-link {
+			border: 1px solid $border-color;
+		}
+
+		.page-item {
+			&:hover,
+		    &.active {
+			    .page-link {
+			        border-color: $primary-light;
+				}	
+			}
+		}
+	}		
 }
 
 .page-item {

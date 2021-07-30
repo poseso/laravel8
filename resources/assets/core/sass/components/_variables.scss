@@ -853,13 +853,13 @@ $badge-size-lg:                                     2rem !default; // Custom var
 
 
 // Code
-$code-bg:                                           if(isDarkMode(), $gray-200, $gray-100) !default; // Custom variable
+$code-bg:                                           if(isDarkMode(), $gray-200, #F1F3F8) !default; // Custom variable
 $code-box-shadow:                                   0px 3px 9px rgba(0, 0, 0, 0.08) !default; // Custom variable
-$code-padding:                                      1px 0.4rem !default; // Custom variable
+$code-padding:                                      0.1rem 0.4rem !default; // Custom variable
 $code-margin:                                       0 0.5rem !default; // Custom variable
 $code-font-weight:                                  400 !default; // Custom variable
 $code-border-radius:                                0.3rem !default;  // Custom variable
-$code-color:                                        #b93993 !default;  // Custom variable
+$code-color:                                        #FF490F !default;  // Custom variable
 $code-space:                                        0.25rem !default;  // Custom variable
 
 

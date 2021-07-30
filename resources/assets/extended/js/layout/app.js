@@ -1,7 +1,7 @@
 "use strict";
 
 require('select2');
-require('../vendors/plugins/select2.init.js');
+require('../../../core/js/vendors/plugins/select2.init.js');
 
 // Class definition
 var KTApp = function() {
@@ -114,18 +114,6 @@ var KTApp = function() {
 
         elements.map(function (element) {
             var sel = element.getAttribute('data-bs-target');
-            //var offset = element.hasAttribute('data-bs-target-offset') ?  parseInt(element.getAttribute('data-bs-target-offset')) : 0;
-
-            /*
-            KTUtil.on(document.body,  element.getAttribute('data-bs-target') + ' [href]', 'click', function(e) {
-                e.preventDefault();
-
-                var el = document.querySelector(this.getAttribute('href'));
-
-                KTUtil.scrollTo(el, offset);
-            });
-            */
-
             var scrollContent = document.querySelector(element.getAttribute('data-bs-target'));
             var scrollSpy = bootstrap.ScrollSpy.getInstance(scrollContent);
             if (scrollSpy) {

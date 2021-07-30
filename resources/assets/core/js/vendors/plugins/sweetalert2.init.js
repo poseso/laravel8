@@ -5,7 +5,7 @@
 //
 
 // Set Defaults
-Swal.mixin({
+swal.mixin({
 	width: 400,
 	heightAuto: false,
 	padding: '2.5rem',

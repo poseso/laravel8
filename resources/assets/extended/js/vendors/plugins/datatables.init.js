@@ -29,6 +29,11 @@ var defaults = {
 
 $.extend(true, $.fn.dataTable.defaults, defaults);
 
+$(document).on('draw.dt', function (e, settings) {
+    // var api = new $.fn.dataTable.Api(settings);
+    // console.log('New DataTable created:', api.table().node());
+});
+
 /*! DataTables Bootstrap 4 integration
  * ©2011-2017 SpryMedia Ltd - datatables.net/license
  */

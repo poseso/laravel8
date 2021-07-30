@@ -68,11 +68,6 @@
 	}
 }
 
-// Background black color
-.bg-black {
-	background-color: $black !important;
-}
-
 // Opacity
 @each $name, $value in $opacity-values {
 	.bg-opacity-#{$name} {
@@ -93,6 +88,16 @@
 			background-color: rgba(var(--bg-color), #{$value}) !important;
 		}		
 	}
+}
+
+// Background black color
+.bg-black {
+	background-color: $black !important;
+}
+
+// Background body color
+.bg-body {
+	--bg-color: #{red($body-bg)}, #{green($body-bg)}, #{blue($body-bg)};
 }
 
 // Lighten bg states
