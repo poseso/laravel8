@@ -5,7 +5,7 @@
         <div class="menu-content d-flex align-items-center px-3">
             <!--begin::Avatar-->
             <div class="symbol symbol-50px me-5">
-                <img alt="Logo" src="assets/media/avatars/150-26.jpg" />
+                <img alt="Logo" src="{{ asset('demo1/media/avatars/150-26.jpg') }}" />
             </div>
             <!--end::Avatar-->
             <!--begin::Username-->
@@ -99,7 +99,7 @@
                 Language
                 <span class="fs-8 rounded bg-light px-3 py-2 position-absolute translate-middle-y top-50 end-0">
                     English
-                    <img class="w-15px h-15px rounded-1 ms-2" src="assets/media/flags/united-states.svg" alt="metronic" />
+                    <img class="w-15px h-15px rounded-1 ms-2" src="{{ asset('demo1/media/flags/united-states.svg') }}" alt="metronic" />
                 </span>
             </span>
         </a>
@@ -109,7 +109,7 @@
             <div class="menu-item px-3">
                 <a href="?page=account/settings" class="menu-link d-flex px-5 active">
                     <span class="symbol symbol-20px me-4">
-                        <img class="rounded-1" src="assets/media/flags/united-states.svg" alt="metronic" />
+                        <img class="rounded-1" src="{{ asset('demo1/media/flags/united-states.svg') }}" alt="metronic" />
                     </span>
                     English
                 </a>
@@ -119,7 +119,7 @@
             <div class="menu-item px-3">
                 <a href="?page=account/settings" class="menu-link d-flex px-5">
                     <span class="symbol symbol-20px me-4">
-                        <img class="rounded-1" src="assets/media/flags/spain.svg" alt="metronic" />
+                        <img class="rounded-1" src="{{ asset('demo1/media/flags/spain.svg') }}" alt="metronic" />
                     </span>
                     Spanish
                 </a>
@@ -129,7 +129,7 @@
             <div class="menu-item px-3">
                 <a href="?page=account/settings" class="menu-link d-flex px-5">
                     <span class="symbol symbol-20px me-4">
-                        <img class="rounded-1" src="assets/media/flags/germany.svg" alt="metronic" />
+                        <img class="rounded-1" src="{{ asset('demo1/media/flags/germany.svg') }}" alt="metronic" />
                     </span>
                     German
                 </a>
@@ -139,7 +139,7 @@
             <div class="menu-item px-3">
                 <a href="?page=account/settings" class="menu-link d-flex px-5">
                     <span class="symbol symbol-20px me-4">
-                        <img class="rounded-1" src="assets/media/flags/japan.svg" alt="metronic" />
+                        <img class="rounded-1" src="{{ asset('demo1/media/flags/japan.svg') }}" alt="metronic" />
                     </span>
                     Japanese
                 </a>
@@ -149,7 +149,7 @@
             <div class="menu-item px-3">
                 <a href="?page=account/settings" class="menu-link d-flex px-5">
                     <span class="symbol symbol-20px me-4">
-                        <img class="rounded-1" src="assets/media/flags/france.svg" alt="metronic" />
+                        <img class="rounded-1" src="{{ asset('demo1/media/flags/france.svg') }}" alt="metronic" />
                     </span>
                     French
                 </a>

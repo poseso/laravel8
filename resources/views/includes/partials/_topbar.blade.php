@@ -86,7 +86,7 @@
     <div class="d-flex align-items-center ms-1 ms-lg-3" id="kt_header_user_menu_toggle">
         <!--begin::Menu wrapper-->
         <div class="cursor-pointer symbol symbol-30px symbol-md-40px" data-kt-menu-trigger="click" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end" data-kt-menu-flip="bottom">
-            <img src="assets/media/avatars/150-26.jpg" alt="metronic" />
+            <img src="{{ asset('demo1/media/avatars/150-26.jpg') }}" alt="metronic" />
         </div>
 
         @include('includes.partials.topbar._user-menu')

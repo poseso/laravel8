@@ -36,8 +36,8 @@
     <!--end::Fonts-->
 
     <!--begin::Global Stylesheets Bundle(used by all pages)-->
-    <link href="{{ asset('demo1/plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('demo1/css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ mix('demo1/plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ mix('demo1/css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
     <!--end::Global Stylesheets Bundle(used by all pages)-->
     <livewire:styles />
     @stack('after-styles')
@@ -48,8 +48,8 @@
 
 @stack('before-scripts')
 <!--begin::Global Javascript Bundle(used by all pages)-->
-<script src="{{ asset('demo1/plugins/global/plugins.bundle.js') }}"></script>
-<script src="{{ asset('demo1/js/scripts.bundle.js') }}"></script>
+<script src="{{ mix('demo1/plugins/global/plugins.bundle.js') }}"></script>
+<script src="{{ mix('demo1/js/scripts.bundle.js') }}"></script>
 <!--end::Global Javascript Bundle-->
 <livewire:scripts />
 @stack('after-scripts')
